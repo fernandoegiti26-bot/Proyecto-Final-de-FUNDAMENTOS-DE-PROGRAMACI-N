@@ -1,0 +1,35 @@
+Algoritmo JuegoDados
+	Definir dado1, dado2, suma Como Entero
+	
+	Escribir "=== JUEGO DE DADOS ==="
+	Escribir "Reglas: Si la suma es 10 ¡GANAS! Si la suma es 7 ¡PIERDES!"
+	Escribir ""
+	
+	Mientras Verdadero Hacer
+		Escribir "Presiona ENTER para tirar los dados..." Sin Saltar
+		 // Espera a que el usuario presione Enter
+		
+		// Generar un número aleatorio entre 1 y 6 para cada dado
+		dado1 <- Aleatorio(1, 6)
+		dado2 <- Aleatorio(1, 6)
+		suma <- dado1 + dado2
+		
+		Escribir "Lanzaste: [", dado1, "] y [", dado2, "] -> Suma: ", suma
+		
+		// Verificar condiciones de victoria o derrota
+		Si suma = 10 Entonces
+			Escribir ""
+			Escribir "¡Felicidades! Sacaste un 10. ¡HAS GANADO!"
+		 // Rompe el bucle simulando un 'break'
+	Sino
+		Si suma = 7 Entonces
+			Escribir ""
+			Escribir "Lo siento, sacaste un 7. ¡HAS PERDIDO!"
+		 // Rompe el bucle simulando un 'break'
+	Sino
+		Escribir "Sigue intentando..."
+		Escribir ""
+	FinSi
+FinSi
+FinMientras
+FinAlgoritmo
