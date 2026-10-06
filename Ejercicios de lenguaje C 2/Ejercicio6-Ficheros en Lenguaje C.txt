@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    FILE *archivo;
+
+    archivo = fopen("datos.txt", "w");
+
+    if (archivo != NULL) {
+        fprintf(archivo, "Hola, este es un archivo de prueba.\n");
+
+        fclose(archivo);
+        printf("El archivo se cerro correctamente.\n");
+    } else {
+        printf("No se pudo abrir el archivo.\n");
+    }
+
+    return 0;
+}

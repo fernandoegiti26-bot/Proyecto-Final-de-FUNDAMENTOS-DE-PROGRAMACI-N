@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+// Función que calcula la letra del NIF a partir del número de DNI
+char calcularLetraNIF(int dni) {
+    // Cadena con la secuencia oficial de letras del NIF
+    const char letras[] = "TRWAGMYFPDXBNJZSQVHLCKE";
+    
+    // El resto de la división entre 23 determina el índice de la letra
+    int resto = dni % 23;
+    
+    return letras[resto];
+}
+
+int main() {
+    int miDNI = 12345678; // Ejemplo de número de DNI
+    
+    // Ejemplo de llamada a la función
+    char letraNIF = calcularLetraNIF(miDNI);
+    
+    // Mostrar el resultado en pantalla
+    printf("El DNI %d tiene la letra: %c\n", miDNI, letraNIF);
+    printf("NIF completo: %d%c\n", miDNI, letraNIF);
+
+    return 0;
+}
